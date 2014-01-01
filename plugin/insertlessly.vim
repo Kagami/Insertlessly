@@ -92,11 +92,11 @@ function! s:BackspacePastBOL()
     let pos = getpos('.')
     let line = getline('.')
     if (pos[2] == 1) && (pos[1] > 1)
-      if match(line, '.') != -1
-        normal! kJ
-      else
-        normal! kgJ
-      endif
+      " if match(line, '.') != -1
+      "   normal! kJ
+      " else
+      normal! kgJ
+      " endif
     else
       exe "normal! " . v:count1 . "X"
     endif
